@@ -1,0 +1,83 @@
+<div class="sidebar-content">
+  <!-- User menu -->
+  <div class="sidebar-user">
+    <div class="category-content">
+      <div class="sidebar-user-material-content">
+        <a ng-href="#/" class="legitRipple">
+          <img src="assets/images/logo.png" class="img-responsive" style="margin: 0 auto;width:150px;">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /user menu -->
+  <ul class="sidebar-category navigation navigation-main navigation-accordion">
+    <li class="category-content">
+      <select  name="tipo_censo" id="tipo_censo" ng-model="censo" ng-change="switchCensos(censo)" class="form-control bg-white listsidebar" style="margin-top: -20px;">
+        <option value="censo_exp_1" disabled>I Censo Experimental</option>
+        <option value="censo_exp_2">II Censo Experimental</option>
+        <option value="des_naturales">Desastres Naturales</option>
+        <option value="censo_nac">Censos Nacionales 2017</option>
+      </select>
+    </li>
+  </ul>
+  <!-- Main navigation -->
+  <div class="sidebar-category sidebar-category-visible">
+    <div class="bg-sidebar-inei" style= "background-image: url(assets/images/sidebar-5.png);"></div>
+    <div class="category-content no-padding">
+      <ul class="navigation navigation-main navigation-accordion">
+        <!-- Main -->
+        <li class="ocultar">
+          <a ng-href="#cronograma"><i class="icon-calendar3"></i> <span>Cronograma Censal</span></a>
+        </li>
+        <li class="ocultar">
+          <a ng-href="#documentos"><i class="icon-books"></i> <span>Documentos metodológicos</span></a>
+        </li>
+        <li class="ocultar">
+          <a ng-href="#convenios"><i class="icon-stack"></i> <span>Convenios</span></a>
+        </li>
+        <li class="ocultar" id="segmentacion">
+          <a ng-href="#/"><i class="icon-mobile2"></i> <span>Segmentación</span></a>
+        </li>
+          <li class="ocultar">
+          <a ng-href="#reclutamiento"><i class="icon-people"></i> <span>Reclutamiento</span></a>
+        </li>
+        <li class="ocultar">
+          <a ng-href="#capacitacion"><i class="icon-graduation2"></i> <span>Capacitación</span></a>
+        </li>
+        <li class="ocultar">
+          <a ng-href="#cobertura"><i><img src="assets/images/icon_peru.png" width="16px"></i><span>Cobertura Empadronamiento</span></a>
+        </li>
+        <li style="display:none;">
+          <a ng-href="#cobertura"><i><img src="assets/images/icon_peru.png" width="16px"></i><span>Cobertura Empadronamiento</span></a>
+        </li>
+        <!--<li>
+          <a href="#"><i class="icon-balance"></i> <span>Presupuesto Censal</span></a>
+        </li>
+        
+        <li>
+          <a href="#"><i class="icon-users"></i> <span>Comisión consultiva</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-width"></i> <span>Promoción Censal</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-pencil3"></i> <span>Logística censal</span></a>
+        </li>
+        
+        <li>
+          <a href="#"><i class="icon-spinner2 spinner"></i> <span>Procesamiento y consistencia</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-select2"></i> <span>Análisis de resultados</span></a>
+        </li>-->
+        <!-- /main -->
+
+        <!-- Forms -->
+        
+        
+        <!-- /page kits -->
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /main navigation -->

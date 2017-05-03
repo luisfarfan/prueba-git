@@ -1,0 +1,4 @@
+/vendor/
+.idea/
+proxy.log
+node_modules

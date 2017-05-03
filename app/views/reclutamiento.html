@@ -1,0 +1,49 @@
+<div class="map-frame">
+  <esri-map-view map="vm.map" on-create="vm.onViewCreated" register-as="mapaPrincipal"
+                 view-options="{
+        zoom: 6,
+        center: [-75.000, -9.500],
+      }">
+    <esri-home-button view="vm.mapView"
+                      view-ui-position="{
+            position: 'top-left',
+            index: 2,
+            title: 'Inicio'
+        }" ng-show="vm.viewLoaded">
+    </esri-home-button>
+  </esri-map-view>
+  <!--<div id="mapDiv" dir="ltr">-->
+  <!--<div id="locateDiv"></div>-->
+  <!--</div>-->
+  <div class="hide">
+    <div class="esri-widget" id="select_capas" style="width:350px;">
+      <select name="select" id="select_cargo">
+        <option value="emp_u">EMPADRONADOR URBANO</option>
+        <option value="emp_r">EMPADRONADOR RURAL</option>
+        <option value="jsu">JEFE DE SECCIÓN URBANO</option>
+        <option value="jsr">JEFE DE SECCIÓN RURAL</option>
+        <option value="jz">JEFE DE ZONA</option>
+        <option value="cod">COORD OPE DIS</option>
+        <option value="jdi">JEFE DISTRITAL</option>
+      </select>
+    </div>
+    <ng-include src="'app/views/partials/toolbar.html'"></ng-include>
+  </div>
+</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h5 class="modal-title"><i class="icon-menu7"></i>&nbsp;<span>{{ vm.modal_title }}</span></h5>
+      </div>
+      <div class="modal-body" style="overflow-y: scroll;height:500px;" ng-bind-html="vm.modal_body">
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal"><i class="icon-cross"></i> Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

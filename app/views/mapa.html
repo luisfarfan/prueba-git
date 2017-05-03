@@ -1,0 +1,42 @@
+<div class="map-frame">
+    <esri-map-view map="vm.map" on-create="vm.onViewCreated" register-as="mapaPrincipal"
+                   view-options="{zoom: 6,center: [-75.000, -9.500],}">
+        <esri-home-button view="vm.mapView" view-ui-position="{position: 'top-left',index: 2,title: 'Inicio'}"
+                          ng-show="vm.viewLoaded">
+        </esri-home-button>
+    </esri-map-view>
+    <div class="hide">
+        <ng-include src="'app/views/partials/toolbar.html'"></ng-include>
+    </div>
+    <div id="modal_reportes" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h6 class="modal-title">DEPARTAMENTO - PROVINCIA - DISTRITO</h6>
+                </div>
+
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody bind-html-compile="vm.tbody_data">
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

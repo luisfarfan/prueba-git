@@ -1,0 +1,27 @@
+{
+  "name": "mcpv",
+  "authors": [
+    "Nick B. Palomino <nbpalomino@gmail.com>"
+  ],
+  "description": "Monitoreo para el CPV 2017",
+  "main": "index.js",
+  "keywords": [
+    "otin"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/packages",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.11",
+    "angular-esri-map": "^2.0.3",
+    "angular-route": "1.5.11"
+  }
+}

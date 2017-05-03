@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/peru.svg?-4ahp2f#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	min-width: 1em;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mapperu:before {
+	background-image: url('fonts/peru.svg');
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	min-width: 1em;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}

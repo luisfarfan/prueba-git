@@ -1,0 +1,32 @@
+<div class="toolbar esri-widget" id="toolbar" ng-show="vm.viewLoaded">
+    <div class="toolbar__item toolbar__search" ng-click="vm.toggleWidget($event, 'search')" tabindex="0"
+         id="toolbar__search" data-title="Busqueda geográfica" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Busqueda geográfica">
+        <span class="esri-icon-search"></span>
+    </div>
+    <div class="toolbar__item toolbar__legend" ng-click="vm.toggleWidget($event, 'legend')" tabindex="0"
+         id="toolbar__legend" data-title="Leyenda" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Leyenda">
+        <span class="esri-icon-layers"></span>
+    </div>
+    <div class="toolbar__item toolbar__layers" ng-click="vm.toggleWidget($event, 'layer-list')" tabindex="0"
+         id="toolbar__layers" data-title="Capas" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Capas">
+        <span class="esri-icon-layer-list"></span>
+    </div>
+    <div class="toolbar__item toolbar__basemaps" ng-click="vm.toggleWidget($event, 'basemap-gallery')" tabindex="0"
+         id="toolbar__basemaps" data-title="Galería de mapas base" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Galería de mapas base">
+        <span class="esri-icon-basemap"></span>
+    </div>
+    <div class="toolbar__item toolbar__nacional" ng-click="vm.showReporteNacional($event)" tabindex="0"
+         id="toolbar__nacional" data-title="Reporte nacional" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Reporte nacional">
+        <span class="esri-icon-resend-invitation"></span>
+    </div>
+    <div class="toolbar__item toolbar__information" ng-click="vm.toggleWidget($event, 'information')" tabindex="0"
+         id="toolbar__information" data-title="Información" data-popup="tooltip" data-placement="bottom"
+         data-original-title="Información">
+        <span class="esri-icon-error2"></span>
+    </div>
+</div>

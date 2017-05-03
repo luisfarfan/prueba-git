@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="IneiCpvMonitoreo">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Monitoreo de Actividades de los Censos Nacionales 2017</title>
+
+    <!-- Global stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
+          type="text/css">
+    <link rel="stylesheet" href="assets/css/icons/icomoon/styles.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/core.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/components.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/colors.css" type="text/css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css" type="text/css">
+    <!-- /global stylesheets -->
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/plugins/notifications/pnotify.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/pages/dashboard.js"></script> -->
+    <script type="text/javascript" src="assets/js/pages/layout_fixed_custom.js"></script>
+    <!-- /theme JS files -->
+</head>
+
+<body class="navbar-top" ng-controller="BodyCtrl">
+<!-- Main navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top bg-indigo-inei" ng-include="'app/views/navbar.html'">
+    <h5 class="tituloheader">SISTEMA DE MONITOREO DE ACTIVIDADES DE LOS CENSOS NACIONALES 2017</h5>
+</div>
+<!-- /main navbar -->
+
+<!-- Page container -->
+<div class="page-container">
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main sidebar -->
+        <!-- /main sidebar -->
+
+        <!-- Main content -->
+        <!-- Content area -->
+        <div class="content-wrapper" ng-view="" style="height:100%"></div>
+        <!-- /content area -->
+        <!-- /main content -->
+    </div>
+    <!-- /page content -->
+</div>
+
+<!-- /page container -->
+<script type="text/javascript" src="//js.arcgis.com/4.3/"></script>
+
+<script type="text/javascript" src="js/packages/angular/angular.js"></script>
+<script type="text/javascript" src="js/packages/angular-route/angular-route.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.10/angular-sanitize.min.js"></script>
+
+<script type="text/javascript" src="js/packages/angular-esri-map/dist/angular-esri-map.js"></script>
+
+<script type="text/javascript" src="app/main.js"></script>
+<script type="text/javascript" src="app/body.js"></script>
+<script type="text/javascript" src="app/map.js"></script>
+<script type="text/javascript" src="assets/js/core/app.js" defer></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        window.dojoConfig = {
+            // The locationPath logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '/js'
+            }, {
+                name: "config",
+                location: package_path + '/config'
+            }, {
+                name: "arcgis_templates",
+                location: package_path + '/..'
+            }]
+        };
+    });
+</script>
+</body>
+
+</html>
