@@ -115,7 +115,8 @@
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                scope.$watch(function () {
+                scope.$watch(function (evento) {
+                    console.log(evento);
                     return scope.$eval(attrs.bindHtmlCompile);
                 }, function (value) {
                     element.html(value);
